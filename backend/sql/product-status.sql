@@ -1,0 +1,3 @@
+ALTER TABLE grocery_catalog.products
+  ADD COLUMN IF NOT EXISTS status TEXT NOT NULL DEFAULT 'PUBLISHED'
+  CHECK (status IN ('DRAFT', 'PUBLISHED'));
